@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Open+sans"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
+    <style>
+        html,body {
+            margin: 0px;
+            font-family: 'Open sans', sans-Serif;
+            font-size: 15px;
+            min-height: 180px;
+            padding: 0px;
+            width: 384px;
+        }
+        h1{
+            font-family: 'Menlo',monospace;
+            font-size: 22px;
+            font-weight: 400;
+            margin: 0px;
+            color: rgb(18, 18, 170);
+        }
+        a:links a:visited {
+            color: rgb(63, 63, 63);
+            outline: 0px;
+            text-decoration: none;
+        }
+        img {
+            width: 30px;
+        }
+        .header {
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            justify-items: center;
+            border-bottom: solid 0.5px #dadada;
+        }
+        .content {
+            padding: 0px 22px;
+        }
+        .content-intro {
+            border-top: 0.5px solid #dadada;
+        }
+        .des{
+            padding: 16px;
+        }
+        .logo-icon {
+            vertical-align: text-bottom;
+            margin-right: 12px;
+        }
+        #version{
+            color: #444;
+            font-size: 18px;
+        }
+        .content-intro {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 22px;
+        }
+        .flex{
+            opacity: 1;
+            transition: opacity 0.2s ease-in-out;
+            width: 120px;
+        }
+        .flex:hover{
+            opacity: 0.4;
+        }
+        .flex .fab{
+            font-size: 48px;
+            color: #2f5876;
+        }
+    </style>
+    <title>Timer||Timer for calculation</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1 class="des">
+        <img src="img/logo.png" alt="Timer logo" class="logo-icon" />
+        Timer
+        <span id="version">(1.0.0)</span>
+      </h1>
+    </div>
+    <div class="content">
+      <p>This is developed by Shashwat harsh</p>
+      <div class="content-intro">
+        <div class="flex">
+          <a href="https://shashwatharsh.github.io/" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
