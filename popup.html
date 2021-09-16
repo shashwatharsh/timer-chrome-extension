@@ -4,11 +4,9 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Open+sans"
-      type="text/css"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -18,7 +16,7 @@
     <style>
         html,body {
             margin: 0px;
-            font-family: 'Open sans', sans-Serif;
+            font-family: 'Open Sans', sans-serif;
             font-size: 15px;
             min-height: 180px;
             padding: 0px;
@@ -91,8 +89,25 @@
         <span id="version">(1.0.0)</span>
       </h1>
     </div>
+    <div class="timer">
+        <div id="time">
+            <div class="time-input"><span class="hr1" id="ih1">0</span>
+            <span class="hr2"id="ih2">0</span>
+            <span class="h">hr :</span>
+          <span class="min1" id="im1">0</span>
+          <span class="min2"id="im2">0</span>
+        <span class="m">m :</span>
+      <span class="sec1" id="is1">0</span>
+      <span class="sec2" id="is2"></span>
+    <span class="s">s</span></div>
+        </div>
+        <div class="btn">
+            <button onclick="btn()" id="st">start</button>
+            <button onclick="" id="reset">reset</button>
+        </div>
+    </div>
     <div class="content">
-      <p>This is developed by Shashwat harsh</p>
+      <p>This is vveloped by Shashwat harsh</p>
       <div class="content-intro">
         <div class="flex">
           <a href="https://shashwatharsh.github.io/" target="_blank">
@@ -101,5 +116,6 @@
         </div>
       </div>
     </div>
+    <script src="popup.js"></script>
   </body>
 </html>
