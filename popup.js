@@ -19,7 +19,23 @@ msec = msec + ((sec1 * 10) + sec2);
 
 reset = () => {
     let r = document.querySelector('.resetm').style.display = "block";
+    controls_check();
 }
+
+cancel_reset = () => {
+    let r = document.querySelector('.resetm').style.display = "none";
+    controls_check();
+}
+
+controls_check = () =>{
+    let contr = document.querySelector('.controls_btn');
+    if(contr.style.display === "none"){
+        contr.style.display = "block";
+    }
+    else{
+        contr.style.display = "none";
+    }
+ }
 
 btn = () => {
     setTimeout(fun = () => {

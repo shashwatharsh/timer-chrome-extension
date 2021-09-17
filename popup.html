@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
@@ -14,70 +17,71 @@
       crossorigin="anonymous"
     />
     <style>
-        html,body {
-            margin: 0px;
-            font-family: 'Open Sans', sans-serif;
-            font-size: 15px;
-            min-height: 180px;
-            padding: 0px;
-            width: 384px;
-        }
-        h1{
-            font-family: 'Menlo',monospace;
-            font-size: 22px;
-            font-weight: 400;
-            margin: 0px;
-            color: rgb(18, 18, 170);
-        }
-        a:links a:visited {
-            color: rgb(63, 63, 63);
-            outline: 0px;
-            text-decoration: none;
-        }
-        img {
-            width: 30px;
-        }
-        .header {
-            align-items: center;
-            align-content: center;
-            justify-content: center;
-            justify-items: center;
-            border-bottom: solid 0.5px #dadada;
-        }
-        .content {
-            padding: 0px 22px;
-        }
-        .content-intro {
-            border-top: 0.5px solid #dadada;
-        }
-        .des{
-            padding: 16px;
-        }
-        .logo-icon {
-            vertical-align: text-bottom;
-            margin-right: 12px;
-        }
-        #version{
-            color: #444;
-            font-size: 18px;
-        }
-        .content-intro {
-            display: flex;
-            justify-content: space-between;
-            padding: 10px 22px;
-        }
-        .flex{
-            opacity: 1;
-            transition: opacity 0.2s ease-in-out;
-            width: 120px;
-        }
-        .flex:hover{
-            opacity: 0.4;
-        }
-        .flex .fab{
-            font-size: 48px;
-            color: #2f5876;
-        }
+      html,
+      body {
+        margin: 0px;
+        font-family: "Open Sans", sans-serif;
+        font-size: 15px;
+        min-height: 180px;
+        padding: 0px;
+        width: 384px;
+      }
+      h1 {
+        font-family: "Menlo", monospace;
+        font-size: 22px;
+        font-weight: 400;
+        margin: 0px;
+        color: rgb(18, 18, 170);
+      }
+      a:links a:visited {
+        color: rgb(63, 63, 63);
+        outline: 0px;
+        text-decoration: none;
+      }
+      img {
+        width: 30px;
+      }
+      .header {
+        align-items: center;
+        align-content: center;
+        justify-content: center;
+        justify-items: center;
+        border-bottom: solid 0.5px #dadada;
+      }
+      .content {
+        padding: 0px 22px;
+      }
+      .content-intro {
+        border-top: 0.5px solid #dadada;
+      }
+      .des {
+        padding: 16px;
+      }
+      .logo-icon {
+        vertical-align: text-bottom;
+        margin-right: 12px;
+      }
+      #version {
+        color: #444;
+        font-size: 18px;
+      }
+      .content-intro {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 22px;
+      }
+      .flex {
+        opacity: 1;
+        transition: opacity 0.2s ease-in-out;
+        width: 120px;
+      }
+      .flex:hover {
+        opacity: 0.4;
+      }
+      .flex .fab {
+        font-size: 48px;
+        color: #2f5876;
+      }
     </style>
     <title>Timer||Timer for calculation</title>
   </head>
@@ -90,24 +94,45 @@
       </h1>
     </div>
     <div class="timer">
-        <div id="time">
-            <div class="time-input"><span class="hr1" id="ih1">0</span>
-            <span class="hr2"id="ih2">0</span>
-            <span class="h">hr :</span>
+      <div id="time">
+        <div class="time-input">
+          <span class="hr1" id="ih1">0</span>
+          <span class="hr2" id="ih2">0</span>
+          <span class="h">hr :</span>
           <span class="min1" id="im1">0</span>
-          <span class="min2"id="im2">0</span>
-        <span class="m">m :</span>
-      <span class="sec1" id="is1">0</span>
-      <span class="sec2" id="is2">5</span>
-    <span class="s">s</span></div>
+          <span class="min2" id="im2">0</span>
+          <span class="m">m :</span>
+          <span class="sec1" id="is1">0</span>
+          <span class="sec2" id="is2">5</span>
+          <span class="s">s</span>
         </div>
-        <div class="resetm" style="display: none;">
-          <input type="time" name="time" id="r_time">
+      </div>
+      <div class="resetm" style="display: none">
+        <div class="in1">
+        <label for="rhour">Hour</label>
+        <input type="text" maxlength="2" name="hour" id="rhour" onkeypress="return isNumberKey(event)">
         </div>
-        <div class="btn">
-            <button onclick="btn()" id="st">start</button>
-            <button onclick="reset()" id="reset">reset</button>
+        <div class="in1">
+        <label for="rmin">Minute</label>
+        <input type="text" maxlength="2" name="min" id="rmin" onkeypress="return isNumberKey(event)">
         </div>
+        <div class="in1">
+        <label for="rsec">Second</label>
+        <input type="text" maxlength="2" name="sec" id="rsec" onkeypress="return isNumberKey(event)">
+        </div>
+        <div class="btns">
+          <input type="submit" value="Submit">
+          <!-- have to add another method for this submit  -->
+        </div>
+        <div class="btnc">
+          <i class="far fa-window-close" onclick="cancel_reset()"></i>
+        </div>
+
+      </div>
+      <div class="controls_btn">
+        <button onclick="btn()" id="st">start</button>
+        <button onclick="reset()" id="reset">reset</button>
+      </div>
     </div>
     <div class="content">
       <p>This is vveloped by Shashwat harsh</p>
