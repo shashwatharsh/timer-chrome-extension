@@ -17,6 +17,8 @@ let sec2 = document.querySelector('.sec2');
 
 msec = msec + ((sec1 * 10) + sec2);
 
+// var for checking that the value is entered by user or not 
+let chcek_stat = false;
 reset = () => {
     let r = document.querySelector('.resetm').style.display = "block";
     controls_check();
@@ -36,6 +38,20 @@ controls_check = () =>{
         contr.style.display = "none";
     }
  }
+ let value_after_last = 0;
+
+submitfun = () => {
+    let r = document.querySelector('.resetm').style.display = "none";
+    controls_check();
+    chcek_stat = true;
+    let rsec = document.getElementById('rsec').value;
+    let rmin = document.getElementById('rmin').value;
+    let rhour = document.getElementById('rhour').value;
+    value_after_last = rsec + (60*rmin)+(60*60*rhour); 
+    // console.log(document.getElementById('rsec').value);
+    console.log(value_after_last);
+
+}
 
 btn = () => {
     setTimeout(fun = () => {
@@ -43,4 +59,14 @@ btn = () => {
         // console.log(sec1.innerHTML);
         sec2.innnerHTML = '7';
     }, 1000);
+}
+
+// Copied form inter net 
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+
+return true;
 }
