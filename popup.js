@@ -39,25 +39,44 @@ controls_check = () =>{
     }
  }
  let value_after_last = 0;
-
+ let value_min_sec = 0;
+let value_hr = 0;
+let rsec =0;
 submitfun = () => {
     let r = document.querySelector('.resetm').style.display = "none";
     controls_check();
     chcek_stat = true;
-    let rsec = document.getElementById('rsec').value;
+     rsec = document.getElementById('rsec').value;
+    rsec = parseInt(rsec, 10);
+    console.log(rsec);
     let rmin = document.getElementById('rmin').value;
+    rmin = parseInt(rmin, 10);
     let rhour = document.getElementById('rhour').value;
+    rhour = parseInt(rhour, 10);
     value_after_last = rsec + (60*rmin)+(60*60*rhour); 
     // console.log(document.getElementById('rsec').value);
     console.log(value_after_last);
-
+    value_min_sec = ((60*rhour)+rmin);
+    value_hr = rhour;
+    document.getElementById('ih2').innerHTML = value_hr;
+    document.getElementById('im2').innerHTML = rmin;
+    document.getElementById('is2').innerHTML = rsec;
+    document.getElementById('ih1').style.display = "none";
+    document.getElementById('im1').style.display = "none";
+    document.getElementById('is1').style.display = "none";
 }
+console.log(value_after_last);
 
 btn = () => {
-    setTimeout(fun = () => {
+   let int =  setInterval(fun = () => {
         console.log('hello');
+        console.log(rsec);
         // console.log(sec1.innerHTML);
-        sec2.innnerHTML = '7';
+        rsec = rsec -1;
+        document.getElementById('is2').innerHTML = rsec;
+        if(rsec <=0){
+            clearInterval(int);
+        }
     }, 1000);
 }
 
