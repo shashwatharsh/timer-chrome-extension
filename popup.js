@@ -43,6 +43,7 @@ controls_check = () =>{
 let value_hr = 0;
 let rsec =0;
 let rmin =0;
+let brmin = false;
 submitfun = () => {
     let r = document.querySelector('.resetm').style.display = "none";
     controls_check();
@@ -50,6 +51,7 @@ submitfun = () => {
      rsec = document.getElementById('rsec').value;
     rsec = parseInt(rsec, 10);
     console.log(rsec);
+    brmin = true;
     rmin = document.getElementById('rmin').value;
     rmin = parseInt(rmin, 10);
     console.log("here rmin = "+rmin);
@@ -70,12 +72,22 @@ submitfun = () => {
 console.log(value_after_last);
 
 btn = () => {
+    if(brmin === false){
+        rsec =5;
+        rmin =0;
+        value_hr =0;
+        console.log('gg');
+    }
    let int =  setInterval(fun = () => {
         // console.log('hello');
         // console.log(rsec);
         // console.log(sec1.innerHTML);
-        document.getElementById('is2').innerHTML = rsec;
         rsec = rsec - 1;
+        if(rsec === -1){
+            document.getElementById('is2').innerHTML = 0;
+            console.log('kk');
+        }
+        document.getElementById('is2').innerHTML = rsec;
         console.log("after rmin "+rmin);
         console.log("after rsec in set "+rsec);
         if(rsec < 0){
