@@ -126,6 +126,23 @@
         font-size: 30px;
         color: rgb(53, 3, 3);
       }
+      .inti{
+        margin: 2px 20px ;
+        padding: 2px;
+      }
+      .intil{
+        width: 20%;
+        /* margin-left: 5px; */
+      }
+      .lh1{
+        margin-right: 18px;
+      }
+      .lm2{
+        margin-right: 5px;
+      }
+      .ls3{
+        margin-right: 2px;
+      }
     </style>
     <title>Timer||Timer for calculation</title>
   </head>
@@ -153,16 +170,16 @@
       </div>
       <div class="resetm" style="display: none">
         <div class="in1">
-        <label for="rhour">Hour</label>
-        <input type="text" maxlength="2" name="hour" id="rhour" onkeypress="return isNumberKey(event)">
+        <label for="rhour" class="intil lh1">Hour</label>
+        <input type="text" maxlength="2" name="hour" class="inti" id="rhour" onkeypress="return isNumberKey(event)">
         </div>
         <div class="in1">
-        <label for="rmin">Minute</label>
-        <input type="text" maxlength="2" name="min" id="rmin" onkeypress="return isNumberKey(event)">
+        <label for="rmin" class="intil lm2">Minute</label>
+        <input type="text" maxlength="2" name="min" class="inti" id="rmin" onkeypress="return isNumberKey(event)">
         </div>
         <div class="in1">
-        <label for="rsec">Second</label>
-        <input type="text" maxlength="2" name="sec" id="rsec" onkeypress="return isNumberKey(event)">
+        <label for="rsec" class="intil ls3">Second</label>
+        <input type="text" maxlength="2" name="sec" class="inti" id="rsec" onkeypress="return isNumberKey(event)">
         </div>
         <div class="btns">
           <input type="submit" value="Submit" onclick="submitfun()">
