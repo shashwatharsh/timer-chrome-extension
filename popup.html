@@ -136,12 +136,46 @@
       }
       .lh1{
         margin-right: 18px;
+        margin-left: 15px;
       }
       .lm2{
+        margin-left: 15px;
         margin-right: 5px;
       }
       .ls3{
+        margin-left: 15px;
         margin-right: 2px;
+      }
+      .btns{
+        margin: 10px;
+        margin-right: 28px;
+        display: inline;
+        font-size: 15px;
+        color: rgb(152, 161, 142);
+      }
+      .btns input{
+        background-color: rgb(71 235 114 / 72%);
+        color: rgb(77, 75, 83);
+        border: solid #252a2ead 2px;
+        border-radius: 5px;
+        height: 33px;
+        width: 63px;
+      }
+      .btnc{
+        /* display: inline; */
+        /* background-color: chartreuse; */
+        /* height: 15px; */
+      }
+      .btnc i {
+        size: 10px;
+      }
+      .contbtn{
+        display: -webkit-inline-box;
+    margin-top: 19px;
+    margin-left: 3px;
+      }
+      .controls_btn{
+        margin-left: 10px;
       }
     </style>
     <title>Timer||Timer for calculation</title>
@@ -181,13 +215,15 @@
         <label for="rsec" class="intil ls3">Second</label>
         <input type="text" maxlength="2" name="sec" class="inti" id="rsec" onkeypress="return isNumberKey(event)">
         </div>
+        <div class="contbtn">
         <div class="btns">
           <input type="submit" value="Submit" onclick="submitfun()">
           <!-- have to add another method for this submit  -->
         </div>
         <div class="btnc">
-          <i class="far fa-window-close" onclick="cancel_reset()"></i>
+          <i class="far fa-window-close fa-2x" onclick="cancel_reset()"></i>
         </div>
+      </div>
 
       </div>
       <div class="controls_btn">
