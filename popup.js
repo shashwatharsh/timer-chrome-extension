@@ -50,13 +50,22 @@ submitfun = () => {
     chcek_stat = true;
      rsec = document.getElementById('rsec').value;
     rsec = parseInt(rsec, 10);
+    if(isNaN(rsec)){
+        rsec =00;
+    }
     console.log(rsec);
     brmin = true;
     rmin = document.getElementById('rmin').value;
     rmin = parseInt(rmin, 10);
+    if(isNaN(rmin)){
+        rmin =00;
+    }
     console.log("here rmin = "+rmin);
     let rhour = document.getElementById('rhour').value;
     rhour = parseInt(rhour, 10);
+    if(isNaN(rhour)){
+        rhour =00;
+    }
     value_after_last = rsec + (60*rmin)+(60*60*rhour); 
     // console.log(document.getElementById('rsec').value);
     console.log(value_after_last);
@@ -71,6 +80,7 @@ submitfun = () => {
 }
 console.log(value_after_last);
 
+
 btn = () => {
     if(brmin === false){
         rsec =5;
@@ -84,13 +94,14 @@ btn = () => {
         // console.log(sec1.innerHTML);
         rsec = rsec - 1;
         if(rsec === -1){
-            document.getElementById('is2').innerHTML = 0;
+            // document.getElementById('is2').innerHTML = 0;
+            rsec =0;
             console.log('kk');
         }
         document.getElementById('is2').innerHTML = rsec;
         console.log("after rmin "+rmin);
         console.log("after rsec in set "+rsec);
-        if(rsec < 0){
+        if(rsec <= 0){
             console.log(rmin);
                 console.log(rsec);
             if(rmin>0){
